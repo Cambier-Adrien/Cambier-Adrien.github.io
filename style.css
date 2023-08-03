@@ -174,8 +174,6 @@ ul{
     .background-nav{
         display:block;
     }
-}
-@media screen and (max-width:50rem){
     .header-content{
         right:10%;
     }
@@ -238,6 +236,8 @@ h1{
     text-transform:uppercase;
     font-weight:500;
     transition:all 0.5s ease-in-out;
+    width:12.5rem;
+    text-align:center;
 }
 .beige-button:hover{
     background-color:black;
