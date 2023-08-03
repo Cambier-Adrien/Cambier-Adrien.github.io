@@ -385,16 +385,25 @@ h1{
     width:47.5rem;
     position:relative;
     margin-top:3rem;
+    display:flex;
+    flex-direction:column;
 }
 .mail input[type="text"]{
     font-size:1rem;
     font-family:Montserrat;
+    position:relative;
+    box-sizing:border-box;
 }
 .mail textarea{
     width:100%;
     resize:none;
     height:10rem;
+    margin:0;
+    padding:0;
     margin-bottom:2rem;
+    font-size:1rem;
+    font-family:Montserrat;
+    box-sizing:border-box;
 }
 .contact-text{
     color:white;
@@ -407,6 +416,7 @@ h1{
 .contact-identity{
     display:flex;
     justify-content:space-between;
+    width:100%;
 }
 .identity{
     width:22.5rem;
@@ -517,6 +527,10 @@ h1{
     }
     .black-section{
         padding-bottom:0;
+    }
+    .content{
+        width:100%;
+        margin-bottom:2rem;
     }
 }
 @media screen and (max-width:50rem){
