@@ -1,53 +1,84 @@
-function toggleMenu() {
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const backgroundNav = document.querySelector('.background-nav');
-    const Nav = document.querySelector('.nav-links');
-    const close = document.querySelector('.close');
-    const links = document.querySelectorAll('.nav-links .links');
-    const nameMenuText = document.querySelector('.name-menu-text');
-  
-    hamburgerMenu.addEventListener('click', function() {
-        backgroundNav.classList.remove('hidden');
-        Nav.classList.add('menu-on');
-    });
-    close.addEventListener('click', function(){
-        backgroundNav.classList.add('hidden');
-        Nav.classList.remove('menu-on');
-    });
-    nameMenuText.addEventListener('click', function(){
-        backgroundNav.classList.add('hidden');
-        Nav.classList.remove('menu-on');
-    });
-    links.forEach(link=>{
-        link.addEventListener('click',function(){
-            backgroundNav.classList.add('hidden');
-            Nav.classList.remove('menu-on');
-        });
-    });
-  }
-  
-  toggleMenu();
+function toggleLanguage(){
+  const languageSelector = document.querySelector('.language-selector');
+  const languageContent = document.querySelector('.language-content');
 
-  function addSmoothScrollToAnchors() {
-    const anchors = document.querySelectorAll('a[href^="#"]');
+  languageContent.addEventListener('click',function() {
+    languageSelector.classList.toggle('visible');
+  });
   
-    anchors.forEach(anchor => {
-      anchor.addEventListener('click', function(event) {
-        event.preventDefault(); // Empêche le comportement de clic par défaut
+  const fr = document.querySelector('#fr');
+  const en = document.querySelector('#en');
+
+  fr.addEventListener('click',function() {
+    languageSelector.classList.toggle('visible');
+    const metaLanguage = document.querySelector('meta[http-equiv="Content-Language"]');
+    if (metaLanguage && metaLanguage.getAttribute('content') === 'fr') {
+      return;
+    } else {
+    window.location.href="index.html";}
+  });
+  en.addEventListener('click',function() {
+    languageSelector.classList.toggle('visible');
+    const metaLanguage = document.querySelector('meta[http-equiv="Content-Language"]');
+    if (metaLanguage && metaLanguage.getAttribute('content') === 'en') {
+      return;
+    } else {
+    window.location.href="index-en.html";}
+  });
+}
+
+toggleLanguage();
+
+function toggleMenu(){
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const backgroundNav = document.querySelector('.background-nav');
+  const Nav = document.querySelector('.nav-links');
+  const close = document.querySelector('.close');
+  const links = document.querySelectorAll('.nav-links .links');
+  const nameMenuText = document.querySelector('.name-menu-text');
   
-        const targetId = anchor.getAttribute('href'); // Obtient la valeur de l'attribut href
-        const targetElement = document.querySelector(targetId); // Sélectionne l'élément cible
-  
-        if (targetElement) {
-          const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset; // Calcul du décalage
-  
-          window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth' // Utilise l'animation fluide
-          });
-        }
+  hamburgerMenu.addEventListener('click', function() {
+    backgroundNav.classList.remove('hidden');
+    Nav.classList.add('menu-on');
+  });
+  close.addEventListener('click', function(){
+    backgroundNav.classList.add('hidden');
+    Nav.classList.remove('menu-on');
+  });
+  nameMenuText.addEventListener('click', function(){
+    backgroundNav.classList.add('hidden');
+    Nav.classList.remove('menu-on');
+  });
+  links.forEach(link=>{
+    link.addEventListener('click',function(){
+      backgroundNav.classList.add('hidden');
+      Nav.classList.remove('menu-on');
       });
-    });
-  }
+  });
+}
   
-  addSmoothScrollToAnchors();
+toggleMenu();
+
+function addSmoothScrollToAnchors(){
+  const anchors = document.querySelectorAll('a[href^="#"]');
+  
+  anchors.forEach(anchor => {
+    anchor.addEventListener('click', function(event) {
+      event.preventDefault(); // Empêche le comportement de clic par défaut
+  
+      const targetId = anchor.getAttribute('href'); // Obtient la valeur de l'attribut href
+      const targetElement = document.querySelector(targetId); // Sélectionne l'élément cible
+  
+      if (targetElement) {
+        const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset; // Calcul du décalage
+  
+        window.scrollTo({
+          top: offsetTop,
+          behavior: 'smooth' // Utilise l'animation fluide
+        });
+      }
+    });
+  });
+}
+  
+addSmoothScrollToAnchors();
