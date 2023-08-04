@@ -320,7 +320,7 @@ h1{
 .content-img{
     height:15rem;
     object-fit:cover;
-    object-position:relative;
+    object-position:center;
 }
 .content-date{
     font-family:Montserrat;
