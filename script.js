@@ -1,17 +1,3 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    
-    if (target) {
-      window.scrollTo({
-          top: target.offsetTop - 3.5 * parseFloat(getComputedStyle(document.documentElement).fontSize), 
-        behavior: 'smooth'   
-      });
-    }
-  });
-});
-
 function toggleLanguage() {
   const languageSelector = document.querySelector('.language-selector');
   const languageContent = document.querySelector('.language-content');
@@ -75,3 +61,17 @@ function toggleMenu() {
 }
 
 toggleMenu();
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 3.5 * parseFloat(getComputedStyle(document.documentElement).fontSize), 
+        behavior: 'smooth'   
+      });
+    }
+  });
+});
