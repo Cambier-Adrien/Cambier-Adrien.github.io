@@ -465,6 +465,8 @@ textarea{
     resize:none;
     height:10rem;
     box-sizing:border-box;
+    font-size:1rem;
+    font-family:var(--font-family-normal);
 }
 .send{
     background-color:inherit;
