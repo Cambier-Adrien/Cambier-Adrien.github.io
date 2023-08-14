@@ -11,6 +11,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       }
     });
   });
+  
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const menuOn = document.querySelector(".menu-on");
 const menuOff = document.querySelector(".menu-off");
@@ -25,15 +26,28 @@ function toggleMenu() {
     navLinks.classList.toggle("on");
 };
 
+
 hamburgerMenu.addEventListener('click', toggleMenu);
 
-link.forEach(links => {
-    links.addEventListener('click', toggleMenu);
+document.querySelector('.menu-name').addEventListener('click', function(){
+  menuOn.classList.add('show');
+  menuOff.classList.remove('show');
+  navLinks.classList.remove('on');
 });
+
+link.forEach(links => {
+    links.addEventListener('click', function(){
+      menuOn.classList.add('show');
+      menuOff.classList.remove('show');
+      navLinks.classList.remove('on');
+    });
+});
+
 menu.addEventListener('click', function(){
     document.querySelector('.menu-background').classList.remove('off');
     document.querySelector('body').style.overflowY = "hidden";
 });
+
 cross.addEventListener('click', function(){
     document.querySelector('.menu-background').classList.add('off');
     document.querySelector('body').style.overflowY = "auto";
