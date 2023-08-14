@@ -468,6 +468,9 @@ h1{
     box-shadow:0 0 1rem rgba(1,1,1,0.2);
     transition:box-shadow 0.25s ease-in-out;
 }
+.grid a{
+    width:8rem;
+}
 .grid:hover{
     box-shadow:0 0 5rem rgba(1,1,1,0.2);
     transition:box-shadow 0.25s ease-in-out;
