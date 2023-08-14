@@ -101,9 +101,11 @@ ul{
     justify-content:flex-end;
     margin-top:1rem;
 }
+.social-links a{
+    margin-left:2rem;
+}
 .social-media{
     height:2.25rem;
-    margin-left:2rem;
 }
 .hamburger-menu{
     display:none;
@@ -822,10 +824,15 @@ footer{
 .name-footer .social-links{
     justify-content:start;
 }
-.name-footer .social-media{
+.name-footer a{
     margin:0;
     margin-right:1.5rem;
     height:1.75rem;
+    position:relative;
+}
+.name-footer .social-media{
+    height:1.75rem;
+    margin:0;
 }
 .language-content-underline{
     width:100%;
