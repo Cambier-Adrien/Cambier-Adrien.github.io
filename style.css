@@ -766,11 +766,12 @@ h1{
     position:relative;
     display:flex;
     margin-top:1rem;
-    margin-bottom:3rem;
+    margin-bottom:1rem;
 }
 .flex .portfolio-button{
     margin:0;
     margin-right:1rem;
+    margin-bottom:1rem;
 }
 .portfolio-button:hover{
     background-color:black;
