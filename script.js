@@ -12,7 +12,7 @@ function toggleLanguage() {
   fr.addEventListener('click', function() {
     const metaLanguage = document.querySelector('meta[http-equiv="Content-Language"]');
     if (metaLanguage && metaLanguage.getAttribute('content') === 'fr') {
-      languageSelector.classList.remove('visible'); // Ne cache le sélecteur que si la langue est déjà fr
+      languageSelector.classList.remove('visible');
       return;
     } else {
       window.location.href = "index.html";
@@ -22,7 +22,7 @@ function toggleLanguage() {
   en.addEventListener('click', function() {
     const metaLanguage = document.querySelector('meta[http-equiv="Content-Language"]');
     if (metaLanguage && metaLanguage.getAttribute('content') === 'en') {
-      languageSelector.classList.remove('visible'); // Ne cache le sélecteur que si la langue est déjà en
+      languageSelector.classList.remove('visible'); 
       return;
     } else {
       window.location.href = "index-en.html";

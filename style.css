@@ -85,6 +85,7 @@ ul{
     text-align:right;
     color:white;
     margin:0;
+    margin-top:1rem;
 }
 .description-text{
     font-family:Cardo;
@@ -228,6 +229,10 @@ h1{
     margin-bottom:3rem;
     width:60%;
     font-weight:500;
+    line-height:1.5rem;
+}
+.text-country{
+    line-height:1.5rem;
 }
 .beige-button{
     font-family:Montserrat;
@@ -338,10 +343,11 @@ h1{
     color:white;
     font-family:Montserrat;
     font-size:1rem;
+    line-height:1.5rem;
 }
 .content .textarea{
     position:relative;
-    height:16rem;
+    height:17.5rem;
 }
 .content-button{
     position:relative;
@@ -515,6 +521,7 @@ h1{
     font-size:1rem;
     margin:0;
     margin-bottom:1rem;
+    line-height:1.5rem;
 }
 .grid-title{
     font-family:Cardo;
@@ -558,6 +565,9 @@ h1{
     font-weight:500;
 }
 @media screen and (max-width:97.5rem){
+    .content .textarea{
+        height:auto;
+    }
     .content-container{
         flex-direction:column;
         align-items:center;
@@ -747,6 +757,7 @@ h1{
     font-weight:500;
     font-size:1rem;
     text-align:left;
+    line-height: 1.5rem;
 }
 .portfolio-button{
     font-family:Montserrat;
