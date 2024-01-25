@@ -1,0 +1,18 @@
+/* Style */
+@font-face{
+    font-family:Cardo;
+    src:url('../font/CrimsonText-Regular.ttf') format('opentype');
+}
+@font-face{
+    font-family:Montserrat;
+    src:url('../font/Montserrat-VariableFont_wght.ttf') format('opentype');
+}
+body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+a,ul{
+    text-decoration:none;
+    color:inherit;
+}
