@@ -58,8 +58,8 @@ function searchPortfolio() {
   const projectBox = document.querySelectorAll(".project-box");
   const themeText = document.querySelector("#project-theme div p");
   const yearText = document.querySelector("#project-year div p");
-  const imgYearArrow = document.querySelector("#project-year div img[src='../img/vers-le-bas.png']");
-  const imgThemeArrow = document.querySelector("#project-theme div img[src='../img/vers-le-bas.png']");
+  const imgYearArrow = document.querySelector("#project-year div img[src='img/vers-le-bas.png']");
+  const imgThemeArrow = document.querySelector("#project-theme div img[src='img/vers-le-bas.png']");
 
   themeSelect.addEventListener('click', function() {
     const tAll = document.querySelector("#tAll");
