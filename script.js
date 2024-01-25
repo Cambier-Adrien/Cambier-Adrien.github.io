@@ -135,8 +135,8 @@ function searchPortfolio() {
       projectBox.forEach(box => {
           box.style.display = "flex";
       });
+      
     });
-
   });
 
   yearSelect.addEventListener('click', function() {
