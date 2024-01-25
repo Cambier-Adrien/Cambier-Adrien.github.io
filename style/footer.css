@@ -127,3 +127,7 @@ footer{
 .invisible{
     visibility:hidden;
 }
+footer .name-footer .social-links a{
+    margin:0;
+    margin-right:2rem;
+}
