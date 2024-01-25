@@ -12,6 +12,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+toggleMenu();
+toggleLanguage();
+searchPortfolio();
+
 function toggleLanguage() {
   const languageSelector = document.querySelector('.language-selector');
   const languageContent = document.querySelector('.language-content');
@@ -47,8 +51,6 @@ function toggleLanguage() {
     }
   });
 }
-
-toggleLanguage();
 
 function searchPortfolio() {
   const theme = document.querySelector("#theme");
@@ -189,9 +191,6 @@ function searchPortfolio() {
   });
 }
 
-
-searchPortfolio();
-
 function toggleMenu() {
   const hamburgerMenu = document.querySelector('.hamburger-menu');
   const backgroundNav = document.querySelector('.background-nav');
@@ -219,5 +218,3 @@ function toggleMenu() {
     });
   });
 }
-
-toggleMenu();
