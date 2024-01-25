@@ -33,9 +33,7 @@ function toggleLanguage() {
         languageSelector.classList.remove('visible');
         return;
     } else {
-        const currentPath = window.location.pathname;
-        const currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
-        window.location.href = `../french/${currentPage}`;
+        window.location.href = 'index.html';
     }
   });
 
@@ -45,9 +43,7 @@ function toggleLanguage() {
         languageSelector.classList.remove('visible');
         return;
     } else {
-        const currentPath = window.location.pathname;
-        const currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
-        window.location.href = `../english/${currentPage}`;
+        window.location.href = `unavailable.html`;
     }
   });
 }
