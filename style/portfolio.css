@@ -21,6 +21,8 @@
     margin-bottom:2rem;
     position:relative;
     object-fit:cover;
+    object-position:center;
+    height:30rem;
 }
 .alternate-img:hover{
     box-shadow:0 0 5rem rgba(1,1,1,0.2);
