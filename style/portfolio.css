@@ -146,7 +146,7 @@
     flex-direction:column;
     justify-content: space-between;
     margin-left:1rem;
-    width:calc(100% - 10rem);
+    width:calc(100% - 5rem);
 }
 .description-theme{
     font-family:Montserrat;
