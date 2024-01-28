@@ -117,10 +117,6 @@ h1{
     color:white;
     margin:1rem;;
 }
-#codage:hover, #langues:hover, #bureautique:hover{
-    text-decoration: underline;
-    color:white;
-}
 .black-section h1{
     color:white;
 }
