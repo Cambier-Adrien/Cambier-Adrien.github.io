@@ -70,14 +70,14 @@ function searchPortfolio() {
     const imgCyber = document.querySelector("#cyber img");
     theme.classList.toggle("visible");
     imgThemeArrow.classList.toggle("rotate90deg");
+    year.classList.remove("visible");
+    imgYearArrow.classList.add("rotate90deg");
 
     info.addEventListener('click', function() {
-      year.classList.remove("visible");
       imgInfo.classList.remove("invisible");
       imgNetwork.classList.add("invisible");
       imgCyber.classList.add("invisible");
       imgtAll.classList.add("invisible");
-      imgYearArrow.classList.add("rotate90deg");
       themeText.textContent ="Informatique";
       projectBox.forEach(box => {
         if (box.contains(box.querySelector('.info'))) {
@@ -86,15 +86,14 @@ function searchPortfolio() {
           box.style.display = "none";
         }
       });
+
     });
 
     network.addEventListener('click', function() {
-      year.classList.remove("visible");
       imgInfo.classList.add("invisible");
       imgNetwork.classList.remove("invisible");
       imgCyber.classList.add("invisible");
       imgtAll.classList.add("invisible");
-      imgYearArrow.classList.add("rotate90deg");
       themeText.textContent ="Réseaux";
       projectBox.forEach(box => {
         if (box.contains(box.querySelector('.network'))) {
@@ -103,15 +102,14 @@ function searchPortfolio() {
           box.style.display = "none";
         }
       });
+
     });
 
     cyber.addEventListener('click', function() {
-      year.classList.remove("visible");
       imgInfo.classList.add("invisible");
       imgNetwork.classList.add("invisible");
       imgCyber.classList.remove("invisible");
       imgtAll.classList.add("invisible");
-      imgYearArrow.classList.add("rotate90deg");
       themeText.textContent ="Cybersécurité";
       projectBox.forEach(box => {
         if (box.contains(box.querySelector('.cyber'))) {
@@ -120,21 +118,20 @@ function searchPortfolio() {
           box.style.display = "none";
         }
       });
+
     });
 
     tAll.addEventListener('click', function() {
-      year.classList.remove("visible");
       imgInfo.classList.add("invisible");
       imgNetwork.classList.add("invisible");
       imgCyber.classList.add("invisible");
       imgtAll.classList.remove("invisible");
-      imgYearArrow.classList.add("rotate90deg");
       themeText.textContent ="Tout";
       projectBox.forEach(box => {
           box.style.display = "flex";
       });
-      
     });
+
   });
 
   yearSelect.addEventListener('click', function() {
@@ -148,42 +145,36 @@ function searchPortfolio() {
     const imgyAll = document.querySelector("#yAll img");
     year.classList.toggle("visible");
     imgYearArrow.classList.toggle("rotate90deg");
+    theme.classList.remove("visible");
+    imgThemeArrow.classList.add("rotate90deg");
 
     y2023.addEventListener('click', function() {
       c2023.style.display = "flex";
       c2024.style.display = "none";
       yearText.textContent ="2023";
-      theme.classList.remove("visible");
       img2023.classList.remove("invisible");
       img2024.classList.add("invisible");
       imgyAll.classList.add("invisible");
-      imgThemeArrow.classList.add("rotate90deg");
     });
 
     y2024.addEventListener('click', function() {
-      
       c2023.style.display = "none";
       c2024.style.display = "flex";
       yearText.textContent ="2024";
-      theme.classList.remove("visible");
       img2024.classList.remove("invisible");
       img2023.classList.add("invisible");
       imgyAll.classList.add("invisible");
-      imgThemeArrow.classList.add("rotate90deg");
     });
 
-    yAll.addEventListener('click', function() {
-      
+    yAll.addEventListener('click', function() {  
       c2023.style.display = "flex";
       c2024.style.display = "flex";
       yearText.textContent ="Tout";
-      theme.classList.remove("visible");
       img2024.classList.add("invisible");
       img2023.classList.add("invisible");
       imgyAll.classList.remove("invisible");
-      imgThemeArrow.classList.add("rotate90deg");
     });
-    
+
   });
 }
 
