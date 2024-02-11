@@ -42,7 +42,7 @@ function signup() {
       "password": newPassword
   };
 
-  $.getJSON("json/users.json", function(data) {
+  $.getJSON("js/json/users.json", function(data) {
       data.utilisateurs.push(newUser);
 
       $.ajax({
