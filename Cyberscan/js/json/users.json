@@ -1,16 +1,8 @@
 {
   "utilisateurs": [
     {
-      "username": "utilisateur1",
-      "password": "motdepasse1"
-    },
-    {
-      "username": "utilisateur2",
-      "password": "motdepasse2"
-    },
-    {
-      "username": "utilisateur3",
-      "password": "motdepasse3"
+      "username": "admin",
+      "password": "admin"
     }
   ]
 }
