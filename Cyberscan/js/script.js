@@ -16,7 +16,7 @@ function login() {
   var username = $("#Username").val();
   var password = $("#Password").val();
 
-  $.getJSON("json/users.json", function(data) {
+  $.getJSON("js/json/users.json", function(data) {
       var found = false;
       $.each(data.utilisateurs, function(index, utilisateur) {
           if (utilisateur.username === username && utilisateur.password === password) {
@@ -41,7 +41,7 @@ function signup() {
       "password": newPassword
   };
 
-  $.getJSON("json/users.json", function(data) {
+  $.getJSON("js/json/users.json", function(data) {
       data.utilisateurs.push(newUser);
 
       $.ajax({
