@@ -1,0 +1,111 @@
+main{
+    position: relative;
+    flex: 1;
+    height: 100%;
+    min-height: 35rem;
+    background-color: var(--black);
+    padding: 0;
+}
+.top{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+.bottom{
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+    border-top: 2px solid var(--grey-border);
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bottom .informations{
+    width: 50%;
+    min-width: 30rem;
+}
+.bottom div{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    min-width: 30rem;
+}
+.dark-button{
+    position: relative;
+    box-sizing: border-box;
+    background-color: var(--grey-button);
+    border-radius: 0.5rem;
+    border: 2px solid var(--grey-border);
+    color: white;
+    text-decoration: none;
+    height: 3rem;
+    width: calc(50% - 1rem);
+    line-height: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1rem;
+    text-align: center;
+    overflow: hidden;
+}
+.dark-button::after{
+    top: 0;
+    left: 0;
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    border-radius: 0.5rem;
+    background-color: var(--white);
+    opacity: 10%;
+    transition: all 0.25s ease-in-out;
+}
+.dark-button:hover::after{
+    transform: translateY(0);
+}
+.menu{
+    display: none;
+}
+/* Responsive */
+@media screen and (max-width: 50rem) {
+    main{
+        width: 100%;
+    }
+    .menu{
+        display: flex;
+    }
+}
+@media screen and (max-width: 40rem) {
+    .bottom div{
+        flex-direction: column;
+        width: 100%;
+        min-width: 100%;
+    }
+    .bottom .informations{
+        margin: 0;
+        width: 100%;
+        min-width: 100%;
+    }
+    .bottom div .dark-button{
+        margin-bottom: 2rem;
+        width: 100%;
+        min-width: 100%;
+    }
+    .bottom{
+        width: 100%;
+    }
+    .top{
+        box-sizing: border-box;
+        padding: 2rem;
+    }
+    .top p{
+        width: 100%;
+    }
+}
