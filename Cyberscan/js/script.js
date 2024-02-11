@@ -28,25 +28,26 @@ function login() {
       if (!found) {
           alert("Nom d'utilisateur ou mot de passe incorrect !");
       }
+  }).fail(function() {
+      alert("Une erreur s'est produite lors de la récupération des données utilisateur.");
   });
 }
 
 function signup() {
-  var newUsername = $("#Username").val();
-  var newPassword = $("#Password").val();
+  var newUsername = $("#NewUsername").val();
+  var newPassword = $("#NewPassword").val();
 
-  // Créer un nouvel objet utilisateur avec les informations du formulaire
   var newUser = {
       "username": newUsername,
       "password": newPassword
   };
 
-  $.getJSON("js/json/users.json", function(data) {
+  $.getJSON("json/users.json", function(data) {
       data.utilisateurs.push(newUser);
 
       $.ajax({
           type: "POST",
-          url: "json/users.json",
+          url: "js/json/users.json",
           contentType: "application/json",
           data: JSON.stringify(data),
           success: function() {
@@ -57,5 +58,7 @@ function signup() {
               alert("Une erreur s'est produite lors de la création du compte.");
           }
       });
+  }).fail(function() {
+      alert("Une erreur s'est produite lors de la récupération des données utilisateur.");
   });
 }
