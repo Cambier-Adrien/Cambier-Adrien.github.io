@@ -84,6 +84,15 @@ main h2, main p{
 .informations:focus{
     outline: none;
 }
+.error{
+    position: relative;
+    font-size: 1rem;
+    width: 17.5rem;
+    text-align: center;
+    color: red;
+    margin-top: 2rem;
+    display: none;
+}
 .blue-button:hover::after{
     transform: translateY(0);
 }

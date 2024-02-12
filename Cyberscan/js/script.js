@@ -2,10 +2,13 @@ document.addEventListener('DOMContentLoaded', function() {
   ToggleMenu();
 });
 
+var users = [
+  { username: "admin", password: "admin" },
+];
+
 function ToggleMenu() {
   const hamburger = document.querySelector('.menu');
   const aside = document.querySelector('aside');
-  const hidden = document.querySelector('.hidden');
   
   hamburger.addEventListener('click', function() {
     aside.classList.toggle('menu-on');
@@ -15,50 +18,32 @@ function ToggleMenu() {
 function login() {
   var username = $("#Username").val();
   var password = $("#Password").val();
+  var error = $("#false-login");
 
-  $.getJSON("js/json/users.json", function(data) {
-      var found = false;
-      $.each(data.utilisateurs, function(index, utilisateur) {
-          if (utilisateur.username === username && utilisateur.password === password) {
-              found = true;
-              window.location.href = "analyze.html";
-              return false;
-          }
-      });
-      if (!found) {
-          alert("Nom d'utilisateur ou mot de passe incorrect !");
+  var found = false;
+  users.forEach(function(user) {
+      if (user.username === username && user.password === password) {
+          found = true;
+          window.location.href = "analyze.html";
       }
-  }).fail(function() {
-      alert("Une erreur s'est produite lors de la récupération des données utilisateur.");
   });
+
+  if (!found) {
+    error.html("Username or password not valid");
+    error.css("display","block");
+  }
 }
 
 function signup() {
-  var newUsername = $("#NewUsername").val();
-  var newPassword = $("#NewPassword").val();
+  var newUsername = $("#Username").val();
+  var newPassword = $("#Password").val();
 
   var newUser = {
       "username": newUsername,
       "password": newPassword
   };
 
-  $.getJSON("js/json/users.json", function(data) {
-      data.utilisateurs.push(newUser);
+  users.push(newUser);
 
-      $.ajax({
-          type: "POST",
-          url: "js/json/users.json",
-          contentType: "application/json",
-          data: JSON.stringify(data),
-          success: function() {
-              alert("Compte créé avec succès !");
-              window.location.href = "login.html";
-          },
-          error: function() {
-              alert("Une erreur s'est produite lors de la création du compte.");
-          }
-      });
-  }).fail(function() {
-      alert("Une erreur s'est produite lors de la récupération des données utilisateur.");
-  });
+  window.location.href = "login.html";
 }
