@@ -58,7 +58,7 @@ h3::before{
     text-align: left;
 }
 /* Responsive */
-@media screen and (max-width: 50rem) {
+@media screen and (max-width: 60rem) {
     aside{
         width: 100%;
         position: absolute;
