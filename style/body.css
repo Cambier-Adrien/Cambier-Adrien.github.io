@@ -117,6 +117,12 @@ h1{
     color:white;
     margin:1rem;;
 }
+.skills a{
+    width:100%;
+}
+a:hover .skills-title{
+    text-decoration:underline;
+}
 .black-section h1{
     color:white;
 }
