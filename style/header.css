@@ -131,12 +131,14 @@ ul{
         height:100%;
         position:fixed;
         top:0;
-        left:-25rem;
+        left:0;
+        transform:translateX(-100%);
         background-color:rgb(0, 0, 23);
         width:25rem;
+        max-width:100%;
         padding:2rem;
         box-sizing:border-box;
-        transition:transform 0.5s ease-in-out;
+        transition:0.5s ease-in-out;
     }
     .nav-links ul{
         flex-direction:column;
@@ -166,7 +168,7 @@ ul{
         margin:10%;
     }
     .menu-on{
-        transform:translateX(100%);
+        transform:translateX(0);
         transition:transform 0.5s ease-in-out;
     }
     .hidden{
