@@ -127,7 +127,6 @@ ul{
 /*  Responsive */
 @media screen and (max-width:82.5rem){
     .nav-links{
-        position:absolute;
         height:100%;
         position:fixed;
         top:0;
