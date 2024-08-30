@@ -7,7 +7,7 @@
     font-family:Montserrat;
     src:url('../font/Montserrat-VariableFont_wght.ttf') format('opentype');
 }
-body{
+body, html{
     margin:0;
     padding:0;
     overflow-x:hidden;

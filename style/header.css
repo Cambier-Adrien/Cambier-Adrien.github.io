@@ -162,7 +162,8 @@ ul{
         display:block;
     }
     .header-content{
-        right:10%;
+        right:0;
+        margin:10%;
     }
     .menu-on{
         transform:translateX(100%);
