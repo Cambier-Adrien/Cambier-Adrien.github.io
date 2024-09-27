@@ -185,23 +185,28 @@ function toggleMenu() {
   const close = document.querySelector('.close');
   const links = document.querySelectorAll('.nav-links .links');
   const nameMenuText = document.querySelector('.name-menu-text');
+  const body = document.querySelector('body');
 
   hamburgerMenu.addEventListener('click', function() {
     backgroundNav.classList.remove('hidden');
     Nav.classList.add('menu-on');
+    body.style.overflowY = "hidden";
   });
   close.addEventListener('click', function() {
     backgroundNav.classList.add('hidden');
     Nav.classList.remove('menu-on');
+    body.style.overflowY = "scroll";
   });
   nameMenuText.addEventListener('click', function() {
     backgroundNav.classList.add('hidden');
     Nav.classList.remove('menu-on');
+    body.style.overflowY = "scroll";
   });
   links.forEach(link => {
     link.addEventListener('click', function() {
       backgroundNav.classList.add('hidden');
       Nav.classList.remove('menu-on');
+      body.style.overflowY = "scroll";
     });
   });
 }
