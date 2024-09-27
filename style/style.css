@@ -10,7 +10,10 @@
 body, html{
     margin:0;
     padding:0;
+}
+body{
     overflow-x:hidden;
+    overflow-y:scroll;
 }
 a,ul{
     text-decoration:none;
